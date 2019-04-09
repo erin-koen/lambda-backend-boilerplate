@@ -20,7 +20,7 @@ COPY package*.json ./
 USER node
 
 # Install all packages
-RUN npm install
+RUN npm install --production
 
 # Ensure copied application files are owned by the non-root user
 COPY --chown=node:node . .
